@@ -1,0 +1,8 @@
+
+	.menu__list{
+		display: none;
+		row-gap: 8px;
+	}
+	.menu__list--open{
+		 display: block;
+	}

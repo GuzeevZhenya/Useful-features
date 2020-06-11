@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+
+<nav class="header__menu menu">
+	<button class="menu__button menu__button--open" type="button" aria-expanded="false">
+
+	</button>
+
+	<ul class="menu__list menu__list--open">
+		<li class="menu__item">1</li>
+		<li class="menu__item">2</li>
+		<li class="menu__item">3</li>
+		<li class="menu__item">4</li>
+	</ul>
+</nav>
+
+<script>
+	(() =>{
+	const menuButton = document.querySelector('.menu__button');
+	const menuList = document.querySelector('.menu__list');
+
+	//Добавляем обработчик событик к menuButton
+	menuButton.addEventListener('click', () =>{
+		let expanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+	//После нажатия меняем значение атрибута
+	menuButton.setAttribute('aria-expanded', !expanded);
+	menuButton.classList.toggle('menu__button--open');
+	menuList.classList.toggle('menu__list--open');
+	});
+})()
+</script>
+
+</body>
+</html>
