@@ -1,0 +1,87 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	background-color: #0e0e15;
+	color: #fff;
+}
+
+*,
+*:before,
+:after{
+	box-sizing: border-box;
+}
+
+p{
+	margin: 0 0 5px;
+}
+
+/*FAQ*/
+
+.faq{
+	max-width: 500px;
+	margin: 20px auto;
+}
+
+.faq-input{  /*Сброс стандартной типизации*/
+	width: 0;
+	height: 0;
+	-webkit-appearance: non;
+	appearance: none;
+	position: absolute;
+}
+
+.faq-item{
+	margin-bottom: 5px;
+	border: 1px solid #b91125;
+}
+
+.faq-text{
+	display: none;
+	font-size: 14px;
+	padding: 10px 15px;
+}
+
+.faq-title{
+	display: block;
+	cursor: pointer;
+	padding: 10px 15px;
+	position: relative;
+}
+
+
+/*Красим при наведении на заголовок*/
+.faq-title:hover {
+	background-color: #b91125;
+	transition: background .3s ease-in-out;
+}
+
+.faq-input:checked ~ .faq-title{
+	background-color: #b91125;
+}
+
+/*Меняем иконка при отрытой форме*/
+.faq-input:checked ~ .faq-title:after{
+	border-style: solid;
+	border-width:0 5px 8px 5px;
+	border-color:  transparent transparent #fff transparent;
+}
+
+.faq-input:checked ~ .faq-text{
+	display: block;
+}
+
+/*Cтрелочка*/
+
+.faq-title:after{
+	content: "";
+	display: block;
+	position: absolute;
+	border-style: solid;
+	border-width: 8px 5px 0 5px;
+	border-color: #fff transparent transparent transparent;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+}
+
