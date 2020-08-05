@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="artboard" data-theme="light">
+        <header class="artboard-heading inner-content">
+            <h2>Dark & light toogle button</h2>
+            <h1>MAKE THE DESIGN COOL</h1>
+        </header>
+        <br>
+        <div class="artboard-button-group">
+            <button data-theme="light" class="button pressed">Light</button>
+            <button data-theme="dark" class="button">Dark</button>
+        </div>
+    </section>
+
+
+
+    <script>
+        const buttons = [...document.querySelectorAll(".button")];
+        const artboard = document.querySelector(".artboard");
+
+        function isSelected({
+            currentTarget
+        }) {
+            const {
+                theme,
+            } = currentTarget.dataset;
+            buttons.forEach(
+                button => button.classList.remove("pressed"),
+            );
+            this.classList.toggle("pressed");
+            artboard.dataset.theme = theme;
+        }
+
+        buttons.forEach(
+            button => button.addEventListener("click", isSelected)
+        );
+    </script>
+
+</body>
+
+</html>
