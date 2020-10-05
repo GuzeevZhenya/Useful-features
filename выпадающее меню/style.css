@@ -1,99 +1,102 @@
-.dws-manu *{
-	margin: 0;
-	padding: 0;	
+.dws-manu * {
+    margin: 0;
+    padding: 0;
 }
 
-header{
-	margin-top: 200px;
+header {
+    margin-top: 200px;
 }
 
 .dws-menu ul,
-.dws-menu ol{
-	list-style: none;
+.dws-menu ol {
+    list-style: none;
 }
 
-.navigation{
-	display: flex;
-	justify-content: center;
+.navigation {
+    display: flex;
+    justify-content: center;
 }
 
 
 /*Стили для ссылок*/
+
 .navigation__link,
 .navigation__sub-link,
-.navigation__subsub-link{
-	display: block;
-	background-color: #ececed;
-	padding: 15px 30px 15px 40px;
-	font-size: 14px;
-	color: #454547;
-	text-decoration: none;
-	text-transform: uppercase;
-	transition: all 0.3s ease;
+.navigation__subsub-link {
+    display: block;
+    background-color: #ececed;
+    padding: 15px 30px 15px 40px;
+    font-size: 14px;
+    color: #454547;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
-.navigation__item{
-	position: relative;
-	border-right: 1px solid #c7c8ca;
+.navigation__item {
+    position: relative;
+    border-right: 1px solid #c7c8ca;
 }
+
 
 /*Стили для фа иконок*/
-.navigation .fa{
-	position: absolute;
-	top: 15px;
-	left: 12px;
-	font-size: 18px;
+
+.navigation .fa {
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    font-size: 18px;
 }
 
-.navigation__item:first-child{
-	border-left: 1px solid #b2b3b5;
+.navigation__item:first-child {
+    border-left: 1px solid #b2b3b5;
 }
 
-.navigation__item:last-child{
-	border-right: 1px solid #b2b3b5;
+.navigation__item:last-child {
+    border-right: 1px solid #b2b3b5;
 }
+
 
 /*Наведение на ссылки*/
+
 .navigation__link:hover,
 .navigation__sub-link:hover,
-.navigation__subsub-link:hover{
-	background-color: #454547;
-	color: #ffffff;
-	box-shadow: 1px 5px 10px -5px black;
-	transition: all 0.3s ease;
+.navigation__subsub-link:hover {
+    background-color: #454547;
+    color: #ffffff;
+    box-shadow: 1px 5px 10px -5px black;
+    transition: all 0.3s ease;
 }
+
 
 /*Стили для выпадающих списков*/
 
-
 .navigation__sub,
-.navigation__subsub{
-	 position: absolute;
-	 padding: 0;
-	 min-height: 150px;
-	display: none;
+.navigation__subsub {
+    position: absolute;
+    padding: 0;
+    min-height: 150px;
+    display: none;
 }
 
 .navigation__sub-item,
-.navigation__subsub-item{
-	border: 1px solid #c7c8ca;
-	width: 100%;
+.navigation__subsub-item {
+    border: 1px solid #c7c8ca;
+    width: 100%;
 }
 
 .navigation__sub-link,
-.navigation__subsub-link{
-	text-transform: none;
-	background-color: #e4e4e5;
+.navigation__subsub-link {
+    text-transform: none;
+    background-color: #e4e4e5;
 }
- 
-.navigation__subsub{
-	position: absolute;
-	right: -109px;
-	top: 0px;
+
+.navigation__subsub {
+    position: absolute;
+    right: -109px;
+    top: 0px;
 }
 
 .navigation__item:hover .navigation__sub {
-	display: block;
+    display: block;
 }
-
- 
